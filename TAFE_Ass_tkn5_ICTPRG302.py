@@ -1,17 +1,17 @@
-# Basic Input and Output
 
-# Input Employee name
+# Ask for the employee name
 employee_name = input("Enter employee name: ")
 
-# Inputting Work_day Hours
-monday_hours = int(input("Enter hours worked on Monday: "))
-tuesday_hours = int(input("Enter hours worked on Tuesday: "))
-wednesday_hours = int(input("Enter hours worked on Wednesday: "))
-thursday_hours = int(input("Enter hours worked on Thursday: "))
-friday_hours = int(input("Enter hours worked on Friday: "))
+# Initialize an empty list to store hours worked for each day
+hours_worked = []
 
-# Calculating total hours in Week
-total_hours = monday_hours + tuesday_hours + wednesday_hours + thursday_hours + friday_hours
+# Ask for hours worked each day
+for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
+    hours = int(input(f"Enter hours worked on {day}: "))
+    hours_worked.append(hours)
 
-# OutPut Total hours
+# Calculate the total hours worked using the sum() function
+total_hours = sum(hours_worked)
+
+# Output the total hours worked
 print(f"Employee: {employee_name}, Total Hours Worked: {total_hours}")
